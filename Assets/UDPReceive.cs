@@ -234,7 +234,7 @@ public class UDPReceive : MonoBehaviour {
 
                 // Den abgerufenen Text anzeigen.
 
-                print(">> " + text);
+                Debug.Log(">> " + text);
 
                 
 

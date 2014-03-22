@@ -54,7 +54,7 @@ public class UDPSend : MonoBehaviour
 
     // prefs 
 
-    private string IP;  // define in init
+    public string IP;  // define in init
 
     public int port;  // define in init
 
@@ -126,9 +126,9 @@ public class UDPSend : MonoBehaviour
 
                 style.alignment = TextAnchor.UpperLeft;
 
-        GUI.Box(rectObj,"# UDPSend-Data\n127.0.0.1 "+port+" #\n"
+        GUI.Box(rectObj,"# UDPSend-Data\n"+IP+" "+port+" #\n"
 
-                    + "shell> nc -lu 127.0.0.1  "+port+" \n"
+                    + "shell> nc -lu "+IP+"  "+port+" \n"
 
                 ,style);
 
@@ -168,9 +168,9 @@ public class UDPSend : MonoBehaviour
 
         // define
 
-        IP="127.0.0.1";
+        //IP="128.95.206.31";
 
-        port=8051;
+        //port=8051;
 
         
 
@@ -254,7 +254,9 @@ public class UDPSend : MonoBehaviour
 
     }
 
- 
+ 	void OnMouseDown () {
+		sendString ("Clicked");	
+	}
 
     // sendData
 
